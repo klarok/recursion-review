@@ -5,6 +5,7 @@
 var parseJSON = function(json) {
   // your code goes here
   var counter = 0;
+  //Returns array with stringified elements
   var parseArray = function() {
     var returnedArray = [];
     var currentValue = '';
@@ -22,14 +23,18 @@ var parseJSON = function(json) {
     }
     return returnedArray;
   };
+  
+  //Parses string into numbers (ints, floats, etc.)
   var parseNumber = function(str) {
     return Number(str);
   };
   
+  //Work in progress
   var parseString = function() {
     var returnedString = '';
   }
   
+  //Main
   var parsedObj;
   for (counter; counter < json.length; counter++) {
     if (json[counter] === '[') {
